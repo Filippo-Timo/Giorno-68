@@ -38,11 +38,11 @@ public class Application {
         // --------------------------------------------- SAVE ---------------------------------------------
         // ! ! ! Ogni volta che salvo un nuovo oggetto nel DB devo commentare o eliminare la riga del save perché sennò mi salverebbe
         // nuovamente gli oggetti nel DB creando dei ripetuti ogni volta che runno la console ! ! !
-        eventoDao.save(primoEvento);
-        eventoDao.save(secondoEvento);
-        eventoDao.save(terzoEvento);
-        eventoDao.save(quartoEvento);
-        eventoDao.save(quintoEvento);
+//        eventoDao.save(primoEvento);
+//        eventoDao.save(secondoEvento);
+//        eventoDao.save(terzoEvento);
+//        eventoDao.save(quartoEvento);
+//        eventoDao.save(quintoEvento);
 
         // Best Practice. Quando finisco di utilizzare delle risorse come Scanner, EntityManager, EntityManagerFactory, ecc è sempre consigliato chiuderle
         // (nel nostro caso è irrilevante perché l'applicazione si avvia e poi si chiude rilasciando tutte le risorse automaticamente)

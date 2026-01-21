@@ -50,7 +50,7 @@ public class Evento {
     private List<Partecipazione> partecipazioni;
 
     @ManyToMany
-    @JoinTable(name = "blogs_categories",
+    @JoinTable(name = "eventi_locations",
             joinColumns = @JoinColumn(name = "evento_id", nullable = false),
             inverseJoinColumns = @JoinColumn(name = "location_id", nullable = false))
     private List<Location> locations;

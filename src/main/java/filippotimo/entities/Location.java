@@ -20,7 +20,7 @@ public class Location {
     @Column
     private String citta;
 
-    @ManyToMany(mappedBy = "categories")
+    @ManyToMany(mappedBy = "locations")
     private List<Evento> eventi;
 
     public Location() {

@@ -8,6 +8,7 @@
         <class>filippotimo.entities.Evento</class>
         <class>filippotimo.entities.Persona</class>
         <class>filippotimo.entities.Partecipazione</class>
+        <class>filippotimo.entities.Location</class>
 
 
         <properties>
