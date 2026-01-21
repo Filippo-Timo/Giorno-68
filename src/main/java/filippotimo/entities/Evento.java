@@ -49,6 +49,14 @@ public class Evento {
     @OneToMany(mappedBy = "evento")
     private List<Partecipazione> partecipazioni;
 
+    @ManyToMany
+    @JoinTable(name = "blogs_categories",
+            joinColumns = @JoinColumn(name = "evento_id", nullable = false),
+            inverseJoinColumns = @JoinColumn(name = "location_id", nullable = false))
+    private List<Location> locations;
+
+    //QUI VA IL MANY TO ONE
+
     public Evento() {
         // OBBLIGATORIO PER TUTTE LE ENTITIES AVERE UN COSTRUTTORE VUOTO! Viene usato da JPA per costruire degli oggetti quando
         // leggeremo delle righe dalla tabella
@@ -108,13 +116,15 @@ public class Evento {
 
     @Override
     public String toString() {
-        return "Evento {" +
-                " id = " + id +
+        return "Evento{" +
+                "id = " + id +
                 ", titolo = " + titolo + '\'' +
                 ", dataEvento = " + dataEvento +
                 ", descrizione = " + descrizione + '\'' +
                 ", tipoEvento = " + tipoEvento +
                 ", numeroMassimoPartecipanti = " + numeroMassimoPartecipanti +
+                ", partecipazioni = " + partecipazioni +
+                ", locations = " + locations +
                 '}';
     }
 }

@@ -7,6 +7,7 @@
         <!-- TODO: Aggiungi elenco delle entities -->
         <class>filippotimo.entities.Evento</class>
         <class>filippotimo.entities.Persona</class>
+        <class>filippotimo.entities.Partecipazione</class>
 
 
         <properties>
