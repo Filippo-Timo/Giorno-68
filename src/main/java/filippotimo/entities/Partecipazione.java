@@ -23,6 +23,7 @@ public class Partecipazione {
 
 
     @Column
+    @Enumerated(EnumType.STRING)
     private stato stato;
 
     public Partecipazione() {

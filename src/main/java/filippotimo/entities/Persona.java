@@ -27,6 +27,7 @@ public class Persona {
     @Column(name = "data_di_nascita")
     private LocalDate dataNascita;
 
+    @Column
     @Enumerated(EnumType.STRING)
     private sesso sesso;
 
