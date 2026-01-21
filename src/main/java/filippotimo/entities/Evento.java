@@ -3,6 +3,7 @@ package filippotimo.entities;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.util.List;
 
 // Ora che ho creato la prima classe farò due cose che andranno fatte PER OGNI CLASSE/TABELLA:
 // 1) Definisco la classe come Entity, ovvero come una tabella del db
@@ -44,6 +45,9 @@ public class Evento {
 
     @Column(name = "max_partecipanti_evento", nullable = false)
     private int numeroMassimoPartecipanti;
+
+    @OneToMany(mappedBy = "evento")
+    private List<Partecipazione> partecipazioni;
 
     public Evento() {
         // OBBLIGATORIO PER TUTTE LE ENTITIES AVERE UN COSTRUTTORE VUOTO! Viene usato da JPA per costruire degli oggetti quando
