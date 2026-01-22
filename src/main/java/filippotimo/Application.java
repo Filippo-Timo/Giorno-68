@@ -4,9 +4,7 @@ import filippotimo.dao.EventiDAO;
 import filippotimo.dao.LocationsDAO;
 import filippotimo.dao.PartecipazioniDAO;
 import filippotimo.dao.PersoneDAO;
-import filippotimo.entities.Location;
-import filippotimo.entities.Persona;
-import filippotimo.entities.sesso;
+import filippotimo.entities.*;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
@@ -44,6 +42,12 @@ public class Application {
         Location primaLocation = new Location("Piazza Mazzini", "Lecce");
         Location secondaLocation = new Location("Piazza Sant'Oronzo", "Lecce");
         Location terzaLocation = new Location("Duomo di Lecce", "Lecce");
+
+        PartitaDiCalcio primaPartita = new PartitaDiCalcio("Inter vs Milan", LocalDate.of(2025, 4, 13), "Il derby di Milano", tipoEvento.Pubblico, 75000, "Inter", "Milan", "Inter", 3, 2);
+        Concerto primoConcerto = new Concerto("Il meglio di Pupo", LocalDate.of(2026, 8, 29), "IMPERDIBILEEEE", tipoEvento.Pubblico, 30000, tipoConcerto.ROCK, false);
+
+//        eventoDao.save(primaPartita);
+//        eventoDao.save(primoConcerto);
 
         // --------------------------------------------- SAVE ---------------------------------------------
 //        eventoDao.save(primoEvento);

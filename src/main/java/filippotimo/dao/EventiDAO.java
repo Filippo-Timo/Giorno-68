@@ -5,6 +5,8 @@ import filippotimo.exceptions.NotFoundException;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
 
+import java.util.UUID;
+
 public class EventiDAO {
     // DAO (Data Access Object) è un Design Pattern. È una classe speciale che ci serve per interagire in maniera semplice con il DB.
     // Le operazioni normali come salvare o leggere dei record, richiedono l'uso dell'EntityManager con una certa complessità. Il DAO quindi
@@ -38,14 +40,14 @@ public class EventiDAO {
         System.out.println("L'evento con titolo = " + newEvento.getTitolo() + " è stato salvato correttamente");
     }
 
-    public Evento findById(long eventoId) {
+    public Evento findById(UUID eventoId) {
         Evento found = entityManager.find(Evento.class, eventoId); // Primo parametro = nome tabella / Secondo parametro = id da cercare
         if (found == null)
             throw new NotFoundException(eventoId); // Controllo se torna found e nel caso lancio un'eccezione custom
         return found;
     }
 
-    public void findByIdAndDeleted(long eventoId) {
+    public void findByIdAndDeleted(UUID eventoId) {
         // step 1) Cerco l'evento tramite Id nel DB
         Evento found = this.findById(eventoId); // Riutilizziamo il metodo .findById() di prima senza doverlo rifare
 

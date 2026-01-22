@@ -9,6 +9,9 @@
         <class>filippotimo.entities.Persona</class>
         <class>filippotimo.entities.Partecipazione</class>
         <class>filippotimo.entities.Location</class>
+        <class>filippotimo.entities.PartitaDiCalcio</class>
+        <class>filippotimo.entities.GaraDiAtletica</class>
+        <class>filippotimo.entities.Concerto</class>
 
 
         <properties>

@@ -2,8 +2,12 @@ package filippotimo.entities;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+import java.time.LocalDate;
 
 @Entity
+@Table(name = "partite_di_calcio")
 public class PartitaDiCalcio extends Evento {
 
     @Column(nullable = false)
@@ -24,7 +28,8 @@ public class PartitaDiCalcio extends Evento {
     public PartitaDiCalcio() {
     }
 
-    public PartitaDiCalcio(String squadraDiCasa, String squadraOspite, String squadraVincente, int numGolCasa, int numGolOspite) {
+    public PartitaDiCalcio(String titolo, LocalDate dataEvento, String descrizione, tipoEvento tipoEvento, int numeroMassimoPartecipanti, String squadraDiCasa, String squadraOspite, String squadraVincente, int numGolCasa, int numGolOspite) {
+        super(titolo, dataEvento, descrizione, tipoEvento, numeroMassimoPartecipanti);
         this.squadraDiCasa = squadraDiCasa;
         this.squadraOspite = squadraOspite;
         this.squadraVincente = squadraVincente;

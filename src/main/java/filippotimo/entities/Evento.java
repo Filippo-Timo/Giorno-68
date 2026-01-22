@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.UUID;
 
 // Ora che ho creato la prima classe farò due cose che andranno fatte PER OGNI CLASSE/TABELLA:
 // 1) Definisco la classe come Entity, ovvero come una tabella del db
@@ -21,12 +22,12 @@ public abstract class Evento {
 
     @Id
     // Annotazione OBBLIGATORIA. Dichiaro che questo attributo dovrà corrispondere alla colonna PRIMARY KEY della tabella eventi
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     // Annotazione OPZIONALE però molto consigliata. Serve per chiedere al DB di generare lui
     // i valori per la PK. IDENTITY significa che invece di biginteger vogliamo usare un bigserial.
     // È consigliabile scrivere questo @GeneratedValue PRIMA di runnare il main per far si che in pgAdmin la colonna id prenda Serial come valore e non BigInteger
     // se prima di scrivere @GeneratedValue runno la console in main allora mi toccherà andare su pgAdmin, eliminare la tabella e runnare di nuovo la console nel main
-    private long id; // long corrisponde al tipo biginteger (a meno di non specificare diversamente)
+    private UUID id; // long corrisponde al tipo biginteger (a meno di non specificare diversamente)
 
     @Column(name = "nome_evento", nullable = false, length = 50)
     // lenght = 50 serve per impostare la lunghezza massima a 50 caratteri
@@ -71,7 +72,7 @@ public abstract class Evento {
         this.numeroMassimoPartecipanti = numeroMassimoPartecipanti;
     }
 
-    public long getId() {
+    public UUID getId() {
         return id;
     }
 
