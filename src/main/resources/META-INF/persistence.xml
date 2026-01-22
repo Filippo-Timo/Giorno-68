@@ -2,7 +2,7 @@
 <persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.2"
              xmlns="http://xmlns.jcp.org/xml/ns/persistence"
              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
-    <persistence-unit name="giorno68pu">
+    <persistence-unit name="giorno69pu">
 
         <!-- TODO: Aggiungi elenco delle entities -->
         <class>filippotimo.entities.Evento</class>
@@ -12,7 +12,7 @@
 
 
         <properties>
-            <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/giorno68"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/giorno69"/>
             <!--  gestioneeventi è il nome del DB (se questo non è già stato creato in PgAdmin avrò un errore-->
             <property name="jakarta.persistence.jdbc.user" value="postgres"/>
             <property name="jakarta.persistence.jdbc.password" value="1234"/>

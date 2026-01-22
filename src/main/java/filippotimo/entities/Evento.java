@@ -16,7 +16,8 @@ import java.util.List;
 @Table(name = "eventi") // "eventi" sarà il nome della tabella nel DB
 // classe = nome al singolare con iniziale in maiuscolo
 // tabella = nome al plurale con iniziale in minuscolo
-public class Evento {
+@Inheritance(strategy = InheritanceType.JOINED)
+public abstract class Evento {
 
     @Id
     // Annotazione OBBLIGATORIA. Dichiaro che questo attributo dovrà corrispondere alla colonna PRIMARY KEY della tabella eventi
