@@ -32,7 +32,13 @@ public class PartitaDiCalcio extends Evento {
         super(titolo, dataEvento, descrizione, tipoEvento, numeroMassimoPartecipanti);
         this.squadraDiCasa = squadraDiCasa;
         this.squadraOspite = squadraOspite;
-        this.squadraVincente = squadraVincente;
+        if (numGolCasa > numGolOspite) {
+            this.squadraVincente = squadraDiCasa;
+        } else if (numGolOspite > numGolCasa) {
+            this.squadraVincente = squadraOspite;
+        } else {
+            this.squadraVincente = null;
+        }
         this.numGolCasa = numGolCasa;
         this.numGolOspite = numGolOspite;
     }
